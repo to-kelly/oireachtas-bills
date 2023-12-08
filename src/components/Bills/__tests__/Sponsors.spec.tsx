@@ -12,20 +12,20 @@ const bill: Bill = {
       sponsor: {
         as: {
           showAs: "Finance",
-          uri: "/finance"
+          uri: "/finance",
         },
-        isPrimary: true
-      }
+        isPrimary: true,
+      },
     },
     {
       sponsor: {
         by: {
           showAs: "Finance",
-          uri: "/finance"
+          uri: "/finance",
         },
-        isPrimary: true
-      }
-    }
+        isPrimary: true,
+      },
+    },
   ],
   shortTitleEn: "",
   status: "",
@@ -35,8 +35,8 @@ const bill: Bill = {
 describe("sponsors", () => {
   it("displays both as/by objects", async () => {
     const { findAllByText } = render(
-        // @ts-expect-error don't need the other props for this
-        <Sponsors row={bill} />
+      // @ts-expect-error don't need the other props for this test
+      <Sponsors row={bill} />
     );
 
     const sponsors = await findAllByText("Finance");

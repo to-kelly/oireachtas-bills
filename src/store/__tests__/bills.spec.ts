@@ -1,12 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import {
-  billsReducer,
-  setSelectedBill,
-  removeFavourite,
-  addFavourite,
-  BillsState,
-} from "../bills";
+import { billsReducer, setSelectedBill, removeFavourite, addFavourite, BillsState } from "../bills";
 import { Bill } from "@/types/Bills";
 
 const bill: Bill = {
