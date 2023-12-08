@@ -31,3 +31,4 @@ npm run build # Build dist files (not tested)
 Used RTK query from redux for API call instead of a thunk.
 Had to cut corners on API types for some things because of time (openapi-typescript-codegen didn't generate models from swagger) .
 Only had time for three tests. One e2e, one react component and one redux store test.
+Didn't have time to fix the playwright action in the pipeline either, sorry.
