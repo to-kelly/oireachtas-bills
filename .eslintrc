@@ -1,0 +1,62 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "18.2.0"
+        }
+    },
+    "plugins": [
+        "import",
+        "@typescript-eslint",
+        "react",
+        "react-hooks"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:react-hooks/recommended",
+        "plugin:react/recommended"
+    ],
+    "rules": {
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/display-name": "off",
+        "react/jsx-boolean-value": "warn",
+        "react/jsx-curly-brace-presence": [
+            "warn",
+            { "props": "never", "children": "never" }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "off",
+        "import/order": [
+            "warn",
+            {
+                "groups": ["builtin", "external", "internal"],
+                "pathGroups": [
+                    {
+                        "pattern": "react",
+                        "group": "external",
+                        "position": "before"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": ["react"],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    },
+    "ignorePatterns": [
+        "node_modules",
+        "dist",
+        "build",
+        "coverage",
+        "setupTests.ts",
+        "vite.config.ts"
+    ]
+}
